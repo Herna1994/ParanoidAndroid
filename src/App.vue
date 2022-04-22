@@ -2,31 +2,64 @@
   <div id="app">
     <Navbar/>
     <Sidebar/>
-    <ThemeEngine/>
+    <transition
+        name="fade"
+        mode="out-in"
+      >
     <router-view></router-view>
+  </transition>
   </div>
 </template>
 
 <script>
 
-import 'materialize-css';
-import 'materialize-css/dist/css/materialize.css';
+import "materialize-css";
+import "materialize-css/dist/css/materialize.css";
 
-import '../public/css/styles.css';
+import "../public/css/styles.css";
 
-import Navbar from './components/Navbar.vue';
-import Sidebar from './components/Sidebar.vue';
-import ThemeEngine from './components/common/ThemeEngine.vue';
+import Navbar from "./components/Navbar.vue";
+import Sidebar from "./components/Sidebar.vue";
 
 export default {
-  name: 'app',
+  name: "app",
   created() {
-    this.$store.dispatch('fetchDevices');
+    this.$store.dispatch("fetchDevices");
   },
   components: {
     Navbar,
     Sidebar,
-    ThemeEngine,
   },
+
 };
 </script>
+
+<style>
+.fade-enter-active,
+.fade-leave-active {
+  transition-duration: 0.3s;
+  transition-property: opacity;
+  transition-timing-function: ease;
+}
+
+.fade-enter,
+.fade-leave-active {
+  opacity: 0
+}
+
+@font-face {
+  font-family: "HarmonyOS";
+  src: local("HarmonyOS"),
+  url(./fonts/HarmonyOS_Sans/HarmonyOS_Sans_Regular.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "HarmonyOS";
+  src: local("HarmonyOS"),
+  url(./fonts/HarmonyOS_Sans/HarmonyOS_Sans_Bold.ttf) format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+</style>

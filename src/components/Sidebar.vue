@@ -3,8 +3,9 @@
     <div>
       <router-link class="bar-logo center" :to="{name: 'home'}">
         <div @click="hidebar">
-          <Logo width="170px" />
-          <h4 class="accent">{{name}}</h4>
+          <Logo width="165px" />
+          <h4 class="default paranoid">paranoid</h4>
+          <h4 class="accent android">android</h4>
         </div>
       </router-link>
 
@@ -18,7 +19,7 @@
         <li v-for="brand in brands" :key="brand.name">
           <div class="collapsible-header">
             <i class="material-icons">phone_android</i>
-            <span style="width: 90%">{{brand.name}}</span>
+            <span style="width: 90%; font-weight: bold">{{brand.name}}</span>
             <i class="material-icons">arrow_drop_down</i>
           </div>
 
@@ -39,14 +40,14 @@
 </template>
 
 <script>
-import Loading from './common/Loading.vue';
-import Search from './common/Search.vue';
-import Logo from './common/Logo.vue';
+import Loading from "./common/Loading.vue";
+import Search from "./common/Search.vue";
+import Logo from "./common/Logo.vue";
 
-import configs from '../configs';
+import configs from "../configs";
 
 export default {
-  name: 'Sidebar',
+  name: "Sidebar",
   components: {
     Loading,
     Search,
@@ -54,7 +55,7 @@ export default {
   },
   mounted() {
     // init collapsible
-    const elems = document.querySelector('.collapsible');
+    const elems = document.querySelector(".collapsible");
     M.Collapsible.init(elems);
   },
   computed: {
@@ -67,7 +68,7 @@ export default {
   },
   methods: {
     hidebar() {
-      const sidenav = document.querySelectorAll('.sidenav');
+      const sidenav = document.querySelectorAll(".sidenav");
       M.Sidenav.init(sidenav);
     },
   },

@@ -9,9 +9,6 @@
         >
           <i class="material-icons left">menu</i>
         </a>
-        <a onclick="toogleMenu()" class="sidenav-trigger show-on-large right">
-          <i class="settings material-icons">color_lens</i>
-        </a>
       </div>
     </nav>
   </div>
@@ -24,6 +21,6 @@ export default {
     // init sidenav
     const sidenav = document.querySelectorAll(".sidenav");
     M.Sidenav.init(sidenav);
-  }
+  },
 };
 </script>

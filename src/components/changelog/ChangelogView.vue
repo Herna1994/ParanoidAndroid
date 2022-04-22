@@ -1,18 +1,18 @@
 <template>
-    <div class="container">
-
-      <VueMarkdown v-if="changes" class="md">
-        {{changes}}
-      </VueMarkdown>
-    </div>
+  <div>
+      <div v-for="change in changes.changelog" :key="change.id" class="container">
+        <VueMarkdown :source="change.md" class="md" style="text-align: center">
+        </VueMarkdown>
+      </div>
+  </div>
 </template>
 <script>
-import VueMarkdown from 'vue-markdown';
+import VueMarkdown from "vue-markdown";
 
-import { fetchROMChangelog } from '../../services/github';
+import { fetchROMChangelog, fetchChangelogMD } from "../../services/github";
 
 export default {
-  name: 'ChangelogView',
+  name: "ChangelogView",
   components: {
     VueMarkdown,
   },
@@ -22,8 +22,7 @@ export default {
     };
   },
   created() {
-    fetchROMChangelog()
-      .then(ch => this.changes = ch);
+    fetchROMChangelog().then((ch) => (this.changes = ch));
   },
 };
 </script>
@@ -43,7 +42,7 @@ export default {
 .md code {
   font-size: 33px;
   font-weight: 500;
-  font-family: "Product Sans";
+  font-family: "HarmonyOS";
   font-style: normal;
 }
 

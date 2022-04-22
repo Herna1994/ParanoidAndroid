@@ -15,6 +15,7 @@
     "vue": "^2.6.12",
     "vue-markdown": "^2.2.4",
     "vue-router": "^3.4.9",
+    "vuejs-twitter-feed": "^1.0.1",
     "vuex": "^3.6.0"
   },
   "devDependencies": {
