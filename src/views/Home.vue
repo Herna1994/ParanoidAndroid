@@ -1,27 +1,28 @@
 <template>
-  <div class="home center">
-    <Logo width="350px" />
-    <ProjectLink/>
-    <Credits/>
+  <div class="center fragment-root" >
+    <div class="text-center">
+      <h4 class="default paranoid">paranoid</h4>
+      <h4 class="accent android">android</h4>
+    </div>
+    <Banner />
+    <ProjectLink />
   </div>
 </template>
 
 <script>
-import ProjectLink from '../components/home/ProjectLink.vue';
-import Credits from '../components/home/Credits.vue';
-import configs from '../configs';
-import Logo from "../components/common/Logomain";
+import ProjectLink from "../components/home/ProjectLink.vue";
+import configs from "../configs";
+import Banner from "../components/common/Banner.vue";
 
 export default {
-  name: 'Home',
+  name: "Home",
   components: {
     ProjectLink,
-    Credits,
-    Logo,
+    Banner,
   },
   created() {
-    document.title = 'Project-LegionOS';
-    document.head.querySelector('meta[name=description]').content ='LegionOS | Download Center';
+    document.title = "Paranoid Android";
+    document.head.querySelector("meta[name=description]").content = "Paranoid Android | Download Center";
   },
   computed: {
     subname() {
