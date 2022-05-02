@@ -30,7 +30,6 @@ export default {
 .container {
   padding: 20px;
   background-color: var(--card);
-  box-shadow: rgb(11 43 158 / 15%) 0px 6px 20px -6px;
   margin-top: 50px;
   border-radius: 24px;
   margin-bottom: 50px;
@@ -38,18 +37,32 @@ export default {
 </style>
 <style>
 .md {
-  color: var(--text);
+  color: var(--text) !important;
 }
-
 .md code {
   font-size: 33px;
   font-weight: 500;
-  font-family: "HarmonyOS";
+  font-family: "Product Sans";
   font-style: normal;
 }
-
 .md h2 {
   font-size: 24px;
   font-weight: 500;
+}
+
+.md p {
+  color: var(--text) !important;
+}
+
+.md li {
+  color: var(--text) !important;
+}
+
+.md strong {
+  color: var(--text) !important;
+}
+
+.md a {
+  color: var(--accent) !important
 }
 </style>

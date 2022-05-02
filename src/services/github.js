@@ -5,7 +5,7 @@ const baseURL = "https://raw.githubusercontent.com/Herna1994";
 
 const fetchDevices = async () => {
   try {
-    const res = await request(`${baseURL}/ota_test/master/devices`, true);
+    const res = await request(`${baseURL}/ota/master/devices`, true);
 
     const brands = [];
     const devices = [];

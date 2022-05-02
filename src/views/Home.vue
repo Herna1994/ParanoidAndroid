@@ -1,8 +1,10 @@
 <template>
+<div class="test">
   <div class="center fragment-root" >
-    <Banner />
+    <Banner class="bannerLogo" />
     <ProjectLink />
   </div>
+</div>
 </template>
 
 <script>

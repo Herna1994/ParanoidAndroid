@@ -20,9 +20,6 @@ pre {
 }
 
 *,
-input {
-  font-family: "HarmonyOS";
-}
 
 .accent {
   color: var(--accent);
@@ -331,7 +328,6 @@ nav .sidenav-trigger i {
 }
 
 .search-link {
-  font-family: "HarmonyOS";
   background-color: transparent !important;
   color: var(--accent) !important;
   padding: 10px !important;
@@ -440,7 +436,6 @@ tr th {
 
 .credits {
   font-size: 13px;
-  font-family: "HarmonyOS";
   color: var(--text);
   margin-bottom: 3px;
 }
