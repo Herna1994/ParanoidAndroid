@@ -30,7 +30,6 @@ export default {
 .container {
   padding: 20px;
   background-color: var(--card);
-  box-shadow: rgb(11 43 158 / 15%) 0px 6px 20px -6px;
   margin-top: 50px;
   border-radius: 24px;
   margin-bottom: 50px;

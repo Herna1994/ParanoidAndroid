@@ -1,6 +1,6 @@
 <template>
   <div class="center fragment-root" >
-    <Banner />
+    <Banner class="bannerLogo" />
     <ProjectLink />
   </div>
 </template>

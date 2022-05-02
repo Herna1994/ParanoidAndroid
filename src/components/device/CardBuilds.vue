@@ -13,17 +13,17 @@
               @click="setBuild(build)"
               class="zips"
             >
-              <div class="collapsible-header white-text cardColor">
+              <div class="collapsible-header white-text">
                 <i class="material-icons">system_update</i>
-                <span class="upper-bold accent" style="width: 100%"
+                <span class="upper-bold textHighlight" style="width: 100%"
                   >{{ build.version }} {{ build.romtype }}
                   {{ build.number }}</span
                 >
                 <i class="material-icons">arrow_drop_down</i>
               </div>
 
-              <div class="collapsible-body">
-                <p class="label">Details</p>
+              <div class="collapsible-body buildBackground">
+                <p class="label description">Details</p>
                 <div class="buildinfo">
                   <div class="deviceprop">
                     <p>Filename: {{ build.filename }}</p>
@@ -52,7 +52,7 @@
                     v-on:click="download(build.url)"
                     download
                     target="_blank"
-                    class="btn"
+                    class="btn buttonInsideCard"
                     >Download</a
                   >
                   <!--               <a
@@ -206,5 +206,9 @@ export default {
 
 .Vue-Toastification__close-button {
   color: var(--accent);
+}
+
+.zips > .collapsible-body {
+  background-color: transparent !important;
 }
 </style>

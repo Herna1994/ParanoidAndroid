@@ -65,3 +65,10 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.wrapper {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+</style>

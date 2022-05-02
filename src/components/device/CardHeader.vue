@@ -1,6 +1,6 @@
 <template>
   <div v-if="device.name">
-    <h5 class="center upper-bold accent">
+    <h5 class="center upper-bold textHighlight">
       {{ device.manufacturer }} {{ device.name }} ({{ device.codename }})
     </h5>
     <div class="row limiter">
@@ -49,7 +49,7 @@
             v-if="device.xda_thread && device.active"
             class="card-action xda-buttons buildbuttons"
           >
-            <a v-bind:href="device.xda_thread" target="_blank" class="btn"
+            <a v-bind:href="device.xda_thread" target="_blank" class="btn buttonInsideCard"
               >XDA Thread</a
             >
           </div>

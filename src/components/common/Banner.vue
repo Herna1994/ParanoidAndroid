@@ -1,15 +1,15 @@
 <template>
   <img
     loading="lazy"
-    style="border-radius: 25px; box-shadow: rgb(11 43 158 / 15%) 0px 6px 20px -6px"
     :src="require('../../' + background)"
-    :width="800"
+    :width="450"
+    :height="450"
     alt="banner"
   />
 </template>
 <script>
 export default {
-  props: ["width"],
+  props: ["width", "height"],
   name: "Banner",
   data() {
     return {
