@@ -47,22 +47,29 @@
                   <pre style="text-align: center"> {{ build.changelog }}</pre>
                 </div>
 
-                <div class="buildbuttons">
-                  <a
-                    v-on:click="download(build.url)"
-                    download
-                    target="_blank"
-                    class="btn buttonInsideCard"
-                    >Download</a
-                  >
-                  <!--               <a
+                  <div class="buildButtons" style="text-align: center">
+                    <a v-if="build.fastbootDownload"
+                      v-on:click="download(build.fastbootDownload)"
+                      download
+                      target="_blank"
+                      class="btn buttonInsideCard"
+                      >Download (fastboot)</a
+                    >
+                <a    v-if="build.recoveryDownload"
+                      v-on:click="download(build.recoveryDownload)"
+                      download
+                      target="_blank"
+                      class="btn buttonInsideCard"
+                      >Download (recovery)</a
+                    >
+                </div>
+                                        <!--               <a
                 v-on:click="download(build.filename, build.version, build.romtype, build.number, device.codename)"
                 download
                 target="_blank"
                 class="btn"
               >Download</a> -->
                 </div>
-              </div>
             </li>
           </template>
         </template>
